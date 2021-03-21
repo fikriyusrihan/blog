@@ -19,7 +19,7 @@ class IndexController extends Controller
         $posts = Post::query()
             ->where('is_published', true)
             ->orderBy('id', 'desc')
-            ->get();
+            ->paginate(5);
 
         // get all featured post
         $featured_posts = Post::query()
@@ -51,4 +51,6 @@ class IndexController extends Controller
             'recent_posts' => $recent_posts
         ]);
     }
+
+
 }

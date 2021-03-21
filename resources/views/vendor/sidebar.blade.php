@@ -4,7 +4,7 @@
     <!-- Search Widget -->
     <div class="card my-4">
         <h5 class="card-header">Search</h5>
-        <form class="card-body" action="" method="GET" role="search">
+        <form class="card-body" action="/search" method="GET" role="search">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search for..." name="q">
                 <span class="input-group-btn">

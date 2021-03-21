@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', IndexController::class);
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
@@ -29,3 +28,5 @@ Route::get('/category/{slug}', CategoryController::class);
 Route::get('tag/{slug}', TagController::class);
 
 Route::get('/post/{slug}', [PostController::class, 'show']);
+
+Route::get('/search', [PostController::class, 'search']);
